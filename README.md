@@ -5,11 +5,11 @@ sailing yacht design, specifically:
 
 * ISO 8666 *Small craft -- Principal data*
 * ISO 11812 *Small craft -- Watertight cockpits and quick draining cockpits*
-	* ISO 12215 *Small craft -- Hull construction and scantlings*
+* ISO 12215 *Small craft -- Hull construction and scantlings*
 	* Part 5: *Design pressures for monohulls, design stresses, scantlings determination*
 	* Part 6: *Structural arrangements and details*
 	* Part 8: *Rudders*
-	* Part 9: *craft appendages*
+	* Part 9: *Sailing craft appendages*
 * ISO 12216 *Small craft -- Windows, portlights, hatches, deadlights and doors -- Strength and watertightness requirments*
 * ISO 12217 Part 2: *Small craft -- Stability and buoyancy assessment and categorization -- Sailing boats of hull length greater than or equal to 6m*
 
