@@ -1,2 +1,25 @@
-<h1>StaticPages#help</h1>
-<p>Find me in app/views/static_pages/help.html.erb</p>
+<title>Help with iso-yd</title>
+<h1>Help using iso-yd</h1>
+<p>
+	First, be aware this is just starting out. It isn't close to being finished yet.
+<p>
+	The intent is to allow a given yacht design to change several times, as the designer follows the common design spiral. The application considers that each trip around the design spiral results in one or more versions of the design. Hence, for one design, there may be many versions.
+</p>
+<p>
+	Some things change, some things stay the same between versions. Therefore, its possible to easily propagate forward the information from a previous version, and tweak for the next version.
+</p>
+<p>
+	A key part of the ISO standards covers determining the scantlings for the various parts of the vessel. There are many parts of each vessel that will result in varying scantling determinations: the area (bottom, topsides, transom, deck, deckhouse sides, deckhouse top, cockpit, etc) and the structural dimensions (distances between bulkheads, stringers, frames, curvature, etc) all factor into the strength needed. Hence, a given design version will have many different areas with different structural properties and therefore scantlings.
+</p>
+<p>
+	Displacement and center of gravity is another aspect of the design that changes between versions, and needs to be calculated in several ways for each version of the yacht design. For example, ISO 12217 requires displacement when empty, displacement at maximum load, displacement at loaded arrival condition, displacement at light craft, and displacement in minimum operating conditions. Of course, a different set of equipment, crew, and fluids is included in each of these displacement conditions. The application allows the individual contributions to displacement to be bookkept, with mass, x,y,z location, and which of the displacement conditions include the mass. This allows the various mass values, as well as the center of gravity, to be calculated for the designer.
+</p>
+<p>
+	The user experience is intended to follow linearly a reading of the above ISO standards. Start by reading through ISO 8666, and enter the information mentioned in the standard. Continue through the rest of the standard documents in order, and the application will assist in performing calculations and the essential if-then studies a designer must perform within each design spiral.
+</p>
+<p>
+	If you are still confused, send email to me, <a href="mailto:Capt.David.Smyth@gmail.com?subject=iso-yd">David E. Smyth</a> and I hope I can help.
+</p>
+<hr></hr>
+
+<p>This page is app/views/static_pages/help.html.erb</p>
