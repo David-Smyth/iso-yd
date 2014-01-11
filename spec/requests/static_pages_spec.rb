@@ -32,4 +32,14 @@ describe "Static Pages" do
   	  expect(page).to have_content('send email to me')
   	end
   end
+  describe "Contact page" do
+  	it "should have title with Contact" do
+      visit '/static_pages/contact'
+      expect(page).to have_title('Contact')
+    end
+    it "should have content with 'mailto:Capt.David.Smyth@gmail.com'" do
+      visit '/static_pages/contact'
+      expect(page).to have_content('David E. Smyth')
+    end
+  end
 end
