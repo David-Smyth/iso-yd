@@ -5,7 +5,7 @@ module StaticPagesHelper
 		if descriminator.empty?
 			"iso-yd | WebApp for ISO Standards for Yacht Design"
 		else
-			"iso-yd | #{descriminator} Web App for ISO Standards for Yacht Design"
+			"iso-yd | #{descriminator} WebApp for ISO Standards for Yacht Design"
 		end
 	end
 end

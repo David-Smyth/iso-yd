@@ -4,7 +4,7 @@ describe "Static Pages" do
   describe "Home page" do
   	it "should have title 'iso-yd'" do
       visit '/static_pages/home'
-      expect(page).to have_title('iso-yd | Home of Web App for ISO')
+      expect(page).to have_title('iso-yd | Home of WebApp for ISO')
     end
     it "should have the content 'Yacht Design Analysis for ISO'" do
       # Capybara provides visit, which sets the page variable
