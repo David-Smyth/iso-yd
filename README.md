@@ -69,8 +69,8 @@ under the MIT License, and therefore is and will remain open source software.
 
 ## Implementation Technology
 
-This application is implemented using Ruby on Rails, specifically Ruby 2.1.0
-and Rails 4.0.2. 
+This application is implemented using Ruby on Rails, specifically Ruby 2.0.0
+and Rails 4.0.8. 
 
 The development process closely follows that suggested by
 [Michael Hartl](http://michaelhartl.com/) in 
