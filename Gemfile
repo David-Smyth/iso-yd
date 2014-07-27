@@ -2,12 +2,13 @@ source 'https://rubygems.org'
 ruby '2.0.0'
 #ruby-gemset=ruby2.0.0rails4.0.8
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.8'
 
 group :development, :test do
-    # Use sqlite3 as the database for Active Record
+    # Use sqlite3 as the database for Active Record, even though PostgreSQL for Heroku.
+    # So much easier that PostgreSQL, and using two different DBs ensures I stay portable.
     gem 'sqlite3', '1.3.8'
+    # RSpec for testing, with generators
     gem 'rspec-rails', '2.13.1'
     gem 'guard-rspec', '2.5.0'
 end
@@ -26,8 +27,10 @@ group :test do
 end
 
 group :production do
-	# Use PostgreSQL in Heroku deployment
+	# Heroku deployment, so:
+	# Use PostgreSQL
 	gem 'pg', '0.15.1'
+	# Static assets
 	gem 'rails_12factor', '0.0.2'
 end
 

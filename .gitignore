@@ -24,4 +24,5 @@ doc/
 .project
 .DS_Store
 .idea
+# Don't share secret token!
 .secret
