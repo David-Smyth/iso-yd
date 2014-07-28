@@ -23,9 +23,9 @@ describe "Static Pages" do
   	end
   end
   describe "Help page" do
-  	it "should have title with 'Help'" do
+  	it "should have title with 'Help for'" do
   	  visit '/static_pages/help'
-  	  expect(page).to have_title('Help')
+  	  expect(page).to have_title('Help for')
   	end
   	it "should have content with 'mailto:Capt.David.Smyth@gmail.com'" do
   	  visit '/static_pages/help'
@@ -35,7 +35,7 @@ describe "Static Pages" do
   describe "Contact page" do
   	it "should have title with Contact" do
       visit '/static_pages/contact'
-      expect(page).to have_title('Contact')
+      expect(page).to have_title('Contact Author of')
     end
     it "should have content with 'mailto:Capt.David.Smyth@gmail.com'" do
       visit '/static_pages/contact'
