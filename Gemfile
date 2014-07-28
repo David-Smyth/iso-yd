@@ -34,8 +34,10 @@ group :production do
 	gem 'rails_12factor', '0.0.2'
 end
 
-# Use SCSS for stylesheets
+# Use SCSS (Sassy CSS) for stylesheets, with Twittter's Bootstrap CSS rules
 gem 'sass-rails', '4.0.1'
+gem 'bootstrap-sass', '2.3.2.0'
+gem 'sprockets', '2.11.0'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '2.1.1'
