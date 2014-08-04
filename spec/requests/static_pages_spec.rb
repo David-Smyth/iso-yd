@@ -1,45 +1,64 @@
 require 'spec_helper'
 
 describe "Static Pages" do
+
+  subject { page }
+
   describe "Home page" do
-  	it "should have title 'iso-yd'" do
-      visit '/static_pages/home'
-      expect(page).to have_title('iso-yd | Home of WebApp for ISO')
-    end
-    it "should have the content 'Yacht Design Analysis for ISO'" do
-      # Capybara provides visit, which sets the page variable
-      visit '/static_pages/home'
-      expect(page).to have_content('Yacht Design Analysis for ISO')
-    end
+
+    before { visit root_path }
+
+  	it { should have_title page_title 'Home of' }
+ 
+    it { should have_content 'Yacht Design Analysis for ISO' }
+
   end
+
   describe "About page" do
-  	it "should have title with 'About'" do
-  	  visit '/static_pages/about'
-  	  expect(page).to have_title('About')
-  	end
-  	it "should have content 'MIT License'" do
-  	  visit '/static_pages/about'
-  	  expect(page).to have_content('MIT License')
-  	end
+
+    before { visit about_path }
+    subject { page }
+
+  	it { should have_title 'About' }
+
+  	it { should have_content 'MIT License' }
+
   end
+
   describe "Help page" do
-  	it "should have title with 'Help for'" do
-  	  visit '/static_pages/help'
-  	  expect(page).to have_title('Help for')
-  	end
-  	it "should have content with 'mailto:Capt.David.Smyth@gmail.com'" do
-  	  visit '/static_pages/help'
-  	  expect(page).to have_content('send email to me')
-  	end
+
+    before { visit help_path }
+    subject { page }
+
+  	it { should have_title 'Help for' }
+
+  	it { should have_content 'send email to me' }
+
   end
+
   describe "Contact page" do
-  	it "should have title with Contact" do
-      visit '/static_pages/contact'
-      expect(page).to have_title('Contact Author of')
-    end
-    it "should have content with 'mailto:Capt.David.Smyth@gmail.com'" do
-      visit '/static_pages/contact'
-      expect(page).to have_content('David E. Smyth')
-    end
+
+    before { visit contact_path }
+    subject { page }
+
+  	it { should have_title 'Contact Author of' }
+
+    it { should have_content 'David E. Smyth' }
+
   end
+
+  it "should have the right links on each page" do
+    visit root_path
+    click_link "About"
+    expect(page).to have_title(page_title('About'))
+    click_link "Help"
+    expect(page).to have_title(page_title('Help for'))
+    click_link "Contact"
+    expect(page).to have_title(page_title('Contact Author of'))
+    click_link "Home"
+    expect(page).to have_title(page_title('Home of'))
+    click_link "Sign up now!"
+    expect(page).to have_title(page_title('Sign up for'))
+  end
+
 end

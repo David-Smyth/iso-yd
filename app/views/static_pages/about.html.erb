@@ -1,9 +1,11 @@
 <% provide(:title, 'About') %>
 
+<div class="hero-unit">
+
 <h1>
-	Yacht Design Analysis for ISO Standards
+	Yacht Design Analysis<br>for ISO Standards
 </h1>
-<h1 class="h1-sub">
+<h2>
 	Open Source
 </h2>
 <p>
@@ -28,5 +30,11 @@
 	user testing. Hence it is and will forever remain bug free ;-)
 </p>
 
+<center>
 <%= link_to image_tag("rails.png", { alt: "Rails" } ), 'http://rubyonrails.org/' %>
+</center>
 
+<!-- Someone somewhere is adding an extra end-div,
+	so while it looks like we need this, we do not!
+</div>
+-->
