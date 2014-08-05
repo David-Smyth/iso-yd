@@ -8,7 +8,7 @@ describe "UserPages" do
     before { visit signup_path }
 
     it { should have_content "Sign up" }
-    it { should have_title(page_title 'Sign up for') }
+    it { should have_title(users_title 'Sign up') }
   end
 
 end
