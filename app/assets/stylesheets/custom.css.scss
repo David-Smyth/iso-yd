@@ -17,6 +17,16 @@ $textColorFootHover:   $grayDark;
 $borderColor:          $grayMediumLight;
 
 //
+// Mixins
+//
+
+@mixin box_sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+//
 // Universal Rules
 //
 
@@ -127,5 +137,16 @@ footer {
       margin-left: 10px;
     }
   }
+}
+
+//
+// Debug display
+//
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box-sizing;
 }
 
